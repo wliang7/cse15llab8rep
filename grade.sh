@@ -11,6 +11,15 @@ echo 'Finished cloning'
 
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
-
+set -e
+files='list-examples-grader-1'
+for file in $files
+do
+    if [[ -f $file ]] && [[ $file == *ListExamples* ]]
+    then 
+        wc -l $file
+    fi
+done
 # Then, add here code to compile and run, and do any post-processing of the
 # tests
+cp -r 
